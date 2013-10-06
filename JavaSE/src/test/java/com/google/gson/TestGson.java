@@ -72,6 +72,6 @@ public class TestGson {
         String data = "{personBeans:[id:\"1000\",name:\"zhang\",birthday:\"Wed Aug 28 11:10:37 PDT 2013\"]}";
         Gson gson = new GsonBuilder().create();
         PersonTableBean tableBean = gson.fromJson(data, PersonTableBean.class);
-
+        assertNotNull(tableBean);
     }
 }
