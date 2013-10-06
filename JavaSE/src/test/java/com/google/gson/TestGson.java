@@ -73,5 +73,6 @@ public class TestGson {
         Gson gson = new GsonBuilder().create();
         PersonTableBean tableBean = gson.fromJson(data, PersonTableBean.class);
         assertNotNull(tableBean);
+        System.out.println(tableBean.toString());
     }
 }
