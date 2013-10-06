@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MediabuyPerference xmlns="http://www.example.org/MediabuyPerferenceJaxb">
+    <Impressions>false</Impressions>
+    <DisplayImpressions>false</DisplayImpressions>
+    <Clicks>false</Clicks>
+    <CTR>false</CTR>
+    <Calls>false</Calls>
+    <AveragePosition>false</AveragePosition>
+    <Cost>false</Cost>
+    <LastUpdate>false</LastUpdate>
+    <Status>false</Status>
+    <XMLReceived>false</XMLReceived>
+    <PublishDate>false</PublishDate>
+    <StatusDate>false</StatusDate>
+    <CTC>false</CTC>
+    <CPC>false</CPC>
+    <CPM>false</CPM>
+    <ImpShare>false</ImpShare>
+    <LostImpShareRank>false</LostImpShareRank>
+    <LostImpShareBudget>true</LostImpShareBudget>
+    <ExactMatchImpShare>false</ExactMatchImpShare>
+    <CostPerCall>false</CostPerCall>
+    <QualityScore>false</QualityScore>
+    <Product>false</Product>
+    <Analyst>false</Analyst>
+    <Manager>false</Manager>
+    <Errors>false</Errors>
+    <AssignDate>false</AssignDate>
+</MediabuyPerference>

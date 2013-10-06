@@ -1,0 +1,55 @@
+<response>
+    <info>
+        <statusCode>0</statusCode>
+        <messages/>
+        <copyright>
+            <imageUrl>http://api.mqcdn.com/res/mqlogo.gif</imageUrl>
+            <imageAltText>© 2013 MapQuest, Inc.</imageAltText>
+            <text>© 2013 MapQuest, Inc.</text>
+        </copyright>
+    </info>
+    <results>
+        <result>
+            <providedLocation>
+                <location>Edson NY</location>
+            </providedLocation>
+            <locations>
+                <location>
+                    <street/>
+                    <adminArea5 type="City">Edson</adminArea5>
+                    <adminArea3 type="State">NY</adminArea3>
+                    <adminArea4 type="County">Broome County</adminArea4>
+                    <postalCode/>
+                    <adminArea1 type="Country">US</adminArea1>
+                    <geocodeQuality>CITY</geocodeQuality>
+                    <geocodeQualityCode>A5XAX</geocodeQualityCode>
+                    <dragPoint>false</dragPoint>
+                    <sideOfStreet>N</sideOfStreet>
+                    <displayLatLng>
+                        <latLng>
+                            <lat>42.026699</lat>
+                            <lng>-75.661697</lng>
+                        </latLng>
+                    </displayLatLng>
+                    <linkId>0</linkId>
+                    <type>s</type>
+                    <latLng>
+                        <lat>42.026699</lat>
+                        <lng>-75.661697</lng>
+                    </latLng>
+                    <mapUrl>
+                        <![CDATA[
+http://www.mapquestapi.com/staticmap/v4/getmap?key=Fmjtd|luub2q6a2h,bl=o5-961ng6&type=map&size=225,160&pois=purple-1,42.026699,-75.661697,0,0|&center=42.026699,-75.661697&zoom=12&rand=1462723046
+]]>
+                    </mapUrl>
+                </location>
+            </locations>
+        </result>
+    </results>
+    <options>
+        <maxResults>-1</maxResults>
+        <thumbMaps>true</thumbMaps>
+        <ignoreLatLngInput>false</ignoreLatLngInput>
+        <boundingBox/>
+    </options>
+</response>

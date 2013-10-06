@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+    <bean id="s" class="com.jim.design.mode.factory.demo1.Student"></bean>
+    <bean id="t" class="com.jim.design.mode.factory.demo1.Teacher"></bean>
+</beans>

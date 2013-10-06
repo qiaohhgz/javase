@@ -1,0 +1,28 @@
+﻿http://blog.quanhz.com/archives/273
+
+中国移动飞信发送接口(Fetion API)
+
+九月 1, 2012 by 全 恒壮 · 74 Comments
+Filed under: PHP, PHP飞信
+本飞信接口是基于HTTP协议的接口，可以在任何支持HTTP协议的程序中使用。开发此接口的主要目的是方便一些不能用PHP的朋友们使用飞信接口，另外可以避免飞信不断升级导致的源程序不可用。本接口同时支持HTTPS，可避免在网络传输中泄漏数据。
+
+（1）飞信接口调用方式，参数同时支持GET、POST两种方式
+
+http://quanapi.sinaapp.com/fetion.php?u=飞信登录手机号&p=飞信登录密码&to=接收飞信的手机号&m=飞信内容
+
+9月3日更新： to参数支持多个接收人，方便群发。多个接收人号码用逗号隔开，如to=13800000000,13811111111,13822222222，支持最多10个接收人。
+
+
+（2）使用HTTPS调用飞信接口，只需将HTTP改为HTTPS
+
+https://quanapi.sinaapp.com/fetion.php?u=飞信登录手机号&p=飞信登录密码&to=接收飞信的手机号&m=飞信内容
+
+（3）返回结果为Json格式，result=0时表示发送成功
+
+{“result”:0,”message”:”\u53d1\u9001\u6210\u529f”}
+
+
+eg:
+http://quanapi.sinaapp.com/fetion.php?u=499107840&p=q7837793&to=15021485352&m=hello
+
+http://quanapi.sinaapp.com/fetion.php?u=13592471223&p=liuchao3090&to=15021485352&m=hello
