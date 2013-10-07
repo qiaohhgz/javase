@@ -65,6 +65,7 @@ public class TestGson {
         PersonBean li = iterator.next();
         assertEquals(li.getId(), 2000);
         assertEquals(li.getName(), "li");
+        System.out.println("Hello");
     }
 
     @Test
@@ -73,5 +74,6 @@ public class TestGson {
         Gson gson = new GsonBuilder().create();
         PersonTableBean tableBean = gson.fromJson(data, PersonTableBean.class);
         assertNotNull(tableBean);
+        System.out.println("hello");
     }
 }
