@@ -5,3 +5,5 @@
 *.war
 *.ear
 /JavaSE/javase.iml
+/*.ipr
+/*.iws
