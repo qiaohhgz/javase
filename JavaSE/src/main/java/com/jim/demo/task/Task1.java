@@ -1,6 +1,8 @@
 package com.jim.demo.task;
 
-import java.io.*;
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
 /**
  * Created with IntelliJ IDEA.
@@ -21,7 +23,7 @@ public class Task1 {
     public static void main(String[] args) throws Exception {
         BufferedInputStream in = new BufferedInputStream(System.in);
 
-        java.io.BufferedReader r = new BufferedReader();
+        BufferedReader r = new BufferedReader(new InputStreamReader(in));
         r.readLine();
     }
 }
