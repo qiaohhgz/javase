@@ -45,9 +45,8 @@
     <orderEntry type="library" name="Maven: com.sun.jersey:jersey-core:1.5" level="project" />
     <orderEntry type="library" name="Maven: commons-httpclient:commons-httpclient:3.1" level="project" />
     <orderEntry type="library" name="Maven: com.sun.jersey:jersey-client:1.5" level="project" />
-    <orderEntry type="library" name="Maven: net.ju-n.bonita.connectors:bonita-qrcode-connector:0.2" level="project" />
-    <orderEntry type="library" name="Maven: com.google.zxing:core:1.6" level="project" />
-    <orderEntry type="library" name="Maven: com.google.zxing:javase:1.6" level="project" />
+    <orderEntry type="library" name="Maven: cglib:cglib-nodep:2.2" level="project" />
+    <orderEntry type="library" name="Maven: org.jsoup:jsoup:1.7.3" level="project" />
   </component>
 </module>
 
