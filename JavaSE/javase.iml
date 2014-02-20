@@ -10,7 +10,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/test/resources" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="1.6" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Maven: org.htmlparser:htmlparser:2.1" level="project" />
     <orderEntry type="library" name="Maven: org.htmlparser:htmllexer:2.1" level="project" />
@@ -48,6 +48,10 @@
     <orderEntry type="library" name="Maven: net.ju-n.bonita.connectors:bonita-qrcode-connector:0.2" level="project" />
     <orderEntry type="library" name="Maven: com.google.zxing:core:1.6" level="project" />
     <orderEntry type="library" name="Maven: com.google.zxing:javase:1.6" level="project" />
+    <orderEntry type="library" name="Maven: com.itextpdf:itextpdf:5.1.2" level="project" />
+    <orderEntry type="library" name="Maven: org.jsoup:jsoup:1.5.2" level="project" />
+    <orderEntry type="library" name="Maven: cglib:cglib:2.1_3" level="project" />
+    <orderEntry type="library" name="Maven: asm:asm:1.5.3" level="project" />
   </component>
 </module>
 

@@ -55,6 +55,7 @@ public class Game implements Runnable {
         while (iterator.hasNext()) {
             new Thread(iterator.next()).start();
         }
+        Thread.yield();
     }
 
     public static void main(String[] args) {

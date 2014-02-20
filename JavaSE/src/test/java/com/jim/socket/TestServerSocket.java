@@ -1,6 +1,7 @@
 package com.jim.socket;
 
 
+import com.jim.net.udp.FileMonitor;
 import com.jim.util.proxy.MyProxy;
 import org.apache.commons.io.FileUtils;
 import org.junit.Ignore;
@@ -21,11 +22,11 @@ import java.net.Socket;
  */
 public class TestServerSocket {
     @Test
-    @Ignore
+//    @Ignore
     public void testDoServer() throws Exception {
-        MyProxy.applyProxy();
+//        MyProxy.applyProxy();
         ServerSocket server = new ServerSocket(6666);
-
+        Thread monitor;
         try {
             while (true) {
                 System.out.println("start server");
@@ -34,7 +35,11 @@ public class TestServerSocket {
                 BufferedReader reader = new BufferedReader(new InputStreamReader(client.getInputStream(), "UTF-8"));
                 String fileName = reader.readLine();
                 System.out.println("fileName = " + fileName);
-                FileUtils.copyInputStreamToFile(client.getInputStream(), new File("D:/MyDownload/" + fileName));
+                File file = new File("D:/MyDownload/" + fileName);
+                monitor = new Thread(new FileMonitor(file, 50, 10204));
+                monitor.start();
+                FileUtils.copyInputStreamToFile(client.getInputStream(), file);
+                monitor.stop();
                 System.out.println("Disconnect client");
             }
         } catch (Exception ex) {
