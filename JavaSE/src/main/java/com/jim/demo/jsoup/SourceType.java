@@ -8,5 +8,5 @@ package com.jim.demo.jsoup;
  * To change this template use File | Settings | File Templates.
  */
 public enum SourceType {
-    URL, FILE, STRING
+    URL, FILE, STRING, XML
 }

@@ -75,7 +75,7 @@ public class ModulePropertyManager {
                     String fName = f.getName();
                     if (fName.endsWith(suffix)) {
                         boolean deleted = f.delete();
-                        if(!deleted){
+                        if (!deleted) {
                             throw new IllegalStateException("Failed to delete " + f.getAbsolutePath());
                         }
                         break;
@@ -457,6 +457,33 @@ public class ModulePropertyManager {
         } finally {
             if (fis != null) fis.close();
         }
+    }
+
+    public static void buildDynamicProperties(File source) throws IOException {
+        // Load properties
+        Properties properties = new Properties();
+        properties.load(new FileInputStream(source));
+
+        //
+        Map<String, String> map = new TreeMap<String, String>();
+        for (Object key : properties.keySet()) {
+            for (String env : arrEnvironments) {
+                String newKey = String.format("%s.%s", key, env);
+                String value = (String) properties.get(key);
+                System.out.printf("Debug: newKey = [%s] value = [%s]\n", newKey, value);
+                map.put(newKey, value);
+            }
+        }
+
+        // Put
+        SortedProperties dynamicProperties = new SortedProperties();
+        dynamicProperties.putAll(map);
+        String comments = "Auto-Saved - ModulePropertyManager";
+        System.out.printf("Source Name:%s\n", source.getName());
+        String dynamicFileName = String.format("%s%s", source.getName().split("\\.")[0], PROPS_DYNAMIC_SUFFIX);
+        File dynamicFile = new File(source.getParent(), dynamicFileName);
+        System.out.printf("Dynamic File Path: %s\n", dynamicFile.getPath());
+        dynamicProperties.store(new FileOutputStream(dynamicFile), comments);
     }
 }
 

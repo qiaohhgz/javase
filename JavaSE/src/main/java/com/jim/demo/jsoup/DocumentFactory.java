@@ -18,6 +18,8 @@ public abstract class DocumentFactory {
                 return new FileDocumentHandler();
             case STRING:
                 return new StringDocumentHandler();
+            case XML:
+                return new XMLDocumentHandler();
             default:
                 return null;
         }

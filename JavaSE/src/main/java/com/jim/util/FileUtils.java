@@ -198,7 +198,7 @@ public class FileUtils {
         return true;
     }
 
-    public static String getFileByClassLoader(Class<?> clazz, String sourceName) {
-        return clazz.getClassLoader().getResource(sourceName).getFile();
+    public static String getFileByClassLoader(String sourceName) {
+        return FileUtils.class.getClassLoader().getResource(sourceName).getFile();
     }
 }

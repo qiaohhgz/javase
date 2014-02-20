@@ -1,6 +1,9 @@
 package com.jim.util.property;
 
+import com.jim.util.FileUtils;
 import org.junit.Test;
+
+import java.io.File;
 
 /**
  * Created with IntelliJ IDEA.
@@ -27,5 +30,11 @@ public class TestModulePropertyManager {
         ModulePropertyManager manager = new ModulePropertyManager();
         manager.work("src/test/resources", "stg");
         manager.rename("src/test/resources");
+    }
+
+    @Test
+    public void testBuildDynamicProperties() throws Exception {
+        File file = new File(FileUtils.getFileByClassLoader("salesportaldb.properties"));
+        ModulePropertyManager.buildDynamicProperties(file);
     }
 }
